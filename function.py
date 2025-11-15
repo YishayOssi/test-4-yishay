@@ -32,7 +32,7 @@ def Caesar2(text:str, num:int):
 
 
 
-def fence(text:str):
+def fence1(text:str):
    List_of_letters = "abcdefghijklmnopqrstuvwxyz"
    new_text = ""
    for ch in text:
@@ -48,3 +48,34 @@ def fence(text:str):
       else:
          text2 += che
    return text1 + text2
+
+
+
+
+def fence2(text: str):
+    n = len(text)
+    result = ""
+    i,j = 0,0
+    if n % 2 == 0:
+     first_half = text[:(n//2)]
+     second_half = text[(n//2):]
+    else:
+     first_half = text[:(n+1)//2]
+     second_half = text[(n+1)//2:]
+     
+
+    while i < len(first_half) or j < len(second_half): 
+       if i < len(first_half):
+            result += first_half[i]
+            i += 1
+       if j < len(second_half):
+            result += second_half[j]
+            j += 1
+   
+    return result
+
+
+
+
+
+ 
